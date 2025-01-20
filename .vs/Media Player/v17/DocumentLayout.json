@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\buerklele\\Documents\\GitHub\\Media-Player\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B2BC318A-AB64-4CCE-8D69-89E984AD8988}|Media Player\\Media Player.csproj|c:\\users\\buerklele\\documents\\github\\media-player\\media player\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2BC318A-AB64-4CCE-8D69-89E984AD8988}|Media Player\\Media Player.csproj|solutionrelative:media player\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2BC318A-AB64-4CCE-8D69-89E984AD8988}|Media Player\\Media Player.csproj|C:\\Users\\buerklele\\Documents\\GitHub\\Media-Player\\media player\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{B2BC318A-AB64-4CCE-8D69-89E984AD8988}|Media Player\\Media Player.csproj|c:\\users\\buerklele\\documents\\github\\media-player\\media player\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{B2BC318A-AB64-4CCE-8D69-89E984AD8988}|Media Player\\Media Player.csproj|solutionrelative:media player\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B2BC318A-AB64-4CCE-8D69-89E984AD8988}|Media Player\\Media Player.csproj|c:\\users\\buerklele\\documents\\github\\media-player\\media player\\mainwindow.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{B2BC318A-AB64-4CCE-8D69-89E984AD8988}|Media Player\\Media Player.csproj|solutionrelative:media player\\mainwindow.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{B2BC318A-AB64-4CCE-8D69-89E984AD8988}|Media Player\\Media Player.csproj|C:\\Users\\buerklele\\Documents\\GitHub\\Media-Player\\media player\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2BC318A-AB64-4CCE-8D69-89E984AD8988}|Media Player\\Media Player.csproj|solutionrelative:media player\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +22,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\buerklele\\Documents\\GitHub\\Media-Player\\Media Player\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "Media Player\\MainWindow.xaml.cs",
@@ -34,12 +30,11 @@
               "RelativeToolTip": "Media Player\\MainWindow.xaml.cs",
               "ViewState": "AgIAAF0AAAAAAAAAAAAgwGkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-01T21:22:10.042Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-01T21:22:10.042Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\buerklele\\Documents\\GitHub\\Media-Player\\Media Player\\MainWindow.xaml",
               "RelativeDocumentMoniker": "Media Player\\MainWindow.xaml",
@@ -47,40 +42,6 @@
               "RelativeToolTip": "Media Player\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-01-01T21:22:11.952Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "c7468e65-e689-45a3-b121-2487cdab36d9",
-        "Display": 0,
-        "X": 0,
-        "Y": 65,
-        "Width": 800,
-        "Height": 600,
-        "WindowState": 2
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\buerklele\\Documents\\GitHub\\Media-Player\\Media Player\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "Media Player\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\buerklele\\Documents\\GitHub\\Media-Player\\Media Player\\MainWindow.xaml",
-              "RelativeToolTip": "Media Player\\MainWindow.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-07T14:21:38.617Z",
               "EditorCaption": ""
             }
           ]
