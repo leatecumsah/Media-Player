@@ -1,16 +1,59 @@
-﻿<Window x:Class="SimpleMediaPlayer.MainWindow"
+﻿<Window x:Name="Mäh" x:Class="SimpleMediaPlayer.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Simple Media Player" Height="350" Width="525">
-    <Grid>
-        <!-- MediaElement: Spielt Audio/Video -->
-        <MediaElement Name="mediaElement" HorizontalAlignment="Center" VerticalAlignment="Top" Width="400" Height="200" LoadedBehavior="Manual"/>
+        Icon="Assets/1Virus.ico"
+        Title="Simple Media Player" Height="450" Width="800" WindowStyle="None" AllowsTransparency="True" ResizeMode="NoResize" 
+        Background="Transparent"
+        >
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="35"/>
+    </WindowChrome.WindowChrome>
+    <Border BorderBrush="#B03052" BorderThickness="4" CornerRadius="15,15,15,15">
+        <Grid >
+            <!--Custom von mana-->
+            <Grid VerticalAlignment="Top" Background="#B03052" Height="24" >
+                <StackPanel Height="20" WindowChrome.IsHitTestVisibleInChrome="True" VerticalAlignment="Center" HorizontalAlignment="Right" Orientation="Horizontal">
+                    <Button Width="20" Height="18" Name="BTN_Minimize" Content="🗕" Background="#7ED4AD" Click="BTN_Minimize_Click" Foreground="Black"/>
+                    <Button Width="20" Height="18" Name="BTN_Maximize" Content="🗖" Background="#7ED4AD" Click="BTN_Maximize_Click"/>
+                    <Button Width="20" Height="18" Name="BTN_Close" Content="✕" Background="#7ED4AD" Click="BTN_Close_Click"/>
+                </StackPanel>
+            </Grid>
 
-        <!-- Buttons zur Steuerung -->
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,20,0,0">
-            <Button Name="PlayButton" Content="▶️ Abspielen" Width="100" Margin="5" Click="PlayButton_Click"/>
-            <Button Name="PauseButton" Content="⏸️ Pause" Width="100" Margin="5" Click="PauseButton_Click"/>
-            <Button Name="StopButton" Content="⏹️ Stop" Width="100" Margin="5" Click="StopButton_Click"/>
-        </StackPanel>
-    </Grid>
+            <Grid>
+
+                <Grid.RowDefinitions>
+                                             
+                    <!-- MediaElement -->
+                    <RowDefinition Height="*" />              
+
+                    <!-- Steuerleiste -->
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                  
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="140" />
+                </Grid.ColumnDefinitions>
+
+                <!--Mediaelement-->
+                <Border Background="#7ED4AD" BorderBrush="#B03052" BorderThickness="4" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="1" Margin="0,20,0,0">
+                    <MediaElement x:Name="mediaElement" 
+                          LoadedBehavior="Manual" 
+                          UnloadedBehavior="Stop" 
+                          Stretch="Uniform" />
+                </Border>
+
+                <Border Background="#D76C82" Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" Margin="0,20,0,20"/>
+                <!-- Steuerelemente -->
+                <DockPanel  Background="#D76C82" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Height="50" RenderTransformOrigin="0.327,0.52">
+                    <Button Content="⏮" Style="{StaticResource RoundButtonStyle}" Click="Previous_Click" Margin="5"/>
+                    <Button Content="▶" Style="{StaticResource RoundButtonStyle}" Click="PlayButton_Click" Margin="5"/>
+                    <Button Content="⏭" Style="{StaticResource RoundButtonStyle}" Click="Next_Click" Margin="5"/>
+                    <Button Content="⏸" Style="{StaticResource RoundButtonStyle}" Click="PauseButton_Click" Margin="5"/>
+                    <Button Content="⏹" Style="{StaticResource RoundButtonStyle}" Click="StopButton_Click" Margin="5"/>
+                 <Button Content="Datei wählen" Click="Select_Folder" Width="120" Margin="5" Background="#B03052" DockPanel.Dock="Right" HorizontalAlignment="Right"/>
+                </DockPanel>
+            </Grid>
+        </Grid>
+    </Border>
 </Window>

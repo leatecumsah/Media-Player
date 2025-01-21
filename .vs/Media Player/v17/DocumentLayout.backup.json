@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\leabu\\source\\repos\\Media Player\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B2BC318A-AB64-4CCE-8D69-89E984AD8988}|Media Player\\Media Player.csproj|c:\\users\\leabu\\source\\repos\\media player\\media player\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B2BC318A-AB64-4CCE-8D69-89E984AD8988}|Media Player\\Media Player.csproj|solutionrelative:media player\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B2BC318A-AB64-4CCE-8D69-89E984AD8988}|Media Player\\Media Player.csproj|c:\\users\\leabu\\source\\repos\\media player\\media player\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{B2BC318A-AB64-4CCE-8D69-89E984AD8988}|Media Player\\Media Player.csproj|solutionrelative:media player\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
@@ -23,6 +27,18 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\leabu\\source\\repos\\Media Player\\Media Player\\App.xaml",
+              "RelativeDocumentMoniker": "Media Player\\App.xaml",
+              "ToolTip": "C:\\Users\\leabu\\source\\repos\\Media Player\\Media Player\\App.xaml",
+              "RelativeToolTip": "Media Player\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-21T15:11:43.621Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\leabu\\source\\repos\\Media Player\\Media Player\\MainWindow.xaml",
               "RelativeDocumentMoniker": "Media Player\\MainWindow.xaml",
@@ -34,15 +50,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\leabu\\source\\repos\\Media Player\\Media Player\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "Media Player\\MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\leabu\\source\\repos\\Media Player\\Media Player\\MainWindow.xaml.cs",
               "RelativeToolTip": "Media Player\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-01T21:22:10.042Z"
+              "WhenOpened": "2025-01-01T21:22:10.042Z",
+              "EditorCaption": ""
             }
           ]
         }
