@@ -111,10 +111,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Assets\Virus.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Assets\1Virus.ico" />
+    <Resource Include="Assets\Virus.ico" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Lorem Ipsum Video.mp4" />
