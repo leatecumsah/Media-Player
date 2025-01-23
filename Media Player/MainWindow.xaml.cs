@@ -2,6 +2,8 @@
 using System;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media.Animation;
+using System.Windows.Media;
 
 namespace SimpleMediaPlayer
 {
@@ -14,6 +16,61 @@ namespace SimpleMediaPlayer
         {
             InitializeComponent();
             userMusicFolder = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Videos";
+
+            // Zugriff auf die GradientStops
+            var gradientBrush = (LinearGradientBrush)MainBorderBrush;
+            var gradientStop1 = gradientBrush.GradientStops[0];
+            var gradientStop2 = gradientBrush.GradientStops[1];
+            var gradientStop3 = gradientBrush.GradientStops[2];
+
+            // NameScope erstellen und GradientStops registrieren
+            NameScope.SetNameScope(this, new NameScope());
+            this.RegisterName("GradientStop1", gradientStop1);
+            this.RegisterName("GradientStop2", gradientStop2);
+            this.RegisterName("GradientStop3", gradientStop3);
+
+            // Animationen erstellen
+            var colorAnimation1 = new ColorAnimation
+            {
+                From = Colors.Purple, // #B47EB3
+                To = Colors.Pink,    // #FFD5FF
+                Duration = new Duration(TimeSpan.FromSeconds(5)),
+                AutoReverse = true,
+                RepeatBehavior = RepeatBehavior.Forever
+            };
+
+            var colorAnimation2 = new ColorAnimation
+            {
+                From = Colors.Pink,  // #FFD5FF
+                To = Colors.LightGreen, // #8BB8A8
+                Duration = new Duration(TimeSpan.FromSeconds(5)),
+                AutoReverse = true,
+                RepeatBehavior = RepeatBehavior.Forever
+            };
+
+            var colorAnimation3 = new ColorAnimation
+            {
+                From = Colors.LightGreen, // #8BB8A8
+                To = Colors.Purple,       // #B47EB3
+                Duration = new Duration(TimeSpan.FromSeconds(5)),
+                AutoReverse = true,
+                RepeatBehavior = RepeatBehavior.Forever
+            };
+
+            // Animationen den GradientStops zuweisen
+            Storyboard.SetTargetName(colorAnimation1, "GradientStop1");
+            Storyboard.SetTargetProperty(colorAnimation1, new PropertyPath(GradientStop.ColorProperty));
+            Storyboard.SetTargetName(colorAnimation2, "GradientStop2");
+            Storyboard.SetTargetProperty(colorAnimation2, new PropertyPath(GradientStop.ColorProperty));
+            Storyboard.SetTargetName(colorAnimation3, "GradientStop3");
+            Storyboard.SetTargetProperty(colorAnimation3, new PropertyPath(GradientStop.ColorProperty));
+
+            // Storyboard erstellen und starten
+            var storyboard = new Storyboard();
+            storyboard.Children.Add(colorAnimation1);
+            storyboard.Children.Add(colorAnimation2);
+            storyboard.Children.Add(colorAnimation3);
+            storyboard.Begin(this);
         }
 
         private void PlayButton_Click(object sender, RoutedEventArgs e)
@@ -104,6 +161,11 @@ namespace SimpleMediaPlayer
         {
             Close();
         }
+
+        private void ChangeMediaVolume(object sender, RoutedPropertyChangedEventArgs<double> args)
+      {
+            mediaElement.Volume = (double)volumeSlider.Value;
+      }
 
         private void Next_Click(object sender, RoutedEventArgs e)
         {
