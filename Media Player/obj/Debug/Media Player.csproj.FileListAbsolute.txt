@@ -23,7 +23,6 @@ C:\Users\leabu\source\repos\Media Player\Media Player\bin\Debug\MaterialDesignTh
 C:\Users\leabu\source\repos\Media Player\Media Player\bin\Debug\MaterialDesignThemes.Wpf.xml
 C:\Users\leabu\source\repos\Media Player\Media Player\bin\Debug\Microsoft.Xaml.Behaviors.pdb
 C:\Users\leabu\source\repos\Media Player\Media Player\bin\Debug\Microsoft.Xaml.Behaviors.xml
-C:\Users\leabu\source\repos\Media Player\Media Player\obj\Debug\Media Player_MarkupCompile.lref
 C:\Users\leabu\source\repos\Media Player\Media Player\obj\Debug\App.baml
 C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\bin\Debug\Media Player.exe.config
 C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\bin\Debug\Media Player.exe
@@ -52,23 +51,7 @@ C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\obj\Debug\Media Pl
 C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\obj\Debug\Media Pl.6759EB6C.Up2Date
 C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\obj\Debug\Media Player.exe
 C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\obj\Debug\Media Player.pdb
-C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
-C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\bin\Debug\MySqlConnector.dll
-C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\bin\Debug\System.Buffers.dll
-C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\bin\Debug\System.Diagnostics.DiagnosticSource.dll
-C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\bin\Debug\System.Memory.dll
-C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\bin\Debug\System.Numerics.Vectors.dll
-C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
-C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\bin\Debug\System.Threading.Tasks.Extensions.dll
-C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
-C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
-C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
-C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\bin\Debug\MySqlConnector.xml
-C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\bin\Debug\System.Buffers.xml
-C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\bin\Debug\System.Diagnostics.DiagnosticSource.xml
-C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\bin\Debug\System.Memory.xml
-C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\bin\Debug\System.Numerics.Vectors.xml
-C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\leabu\source\repos\Media Player\Media Player\obj\Debug\Media Player_Content.g.cs
+C:\Users\leabu\source\repos\Media Player\Media Player\bin\Debug\TagLibSharp.dll
+C:\Users\leabu\source\repos\Media Player\Media Player\bin\Debug\TagLibSharp.pdb
+C:\Users\leabu\source\repos\Media Player\Media Player\bin\Debug\TagLibSharp.xml

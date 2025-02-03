@@ -6,8 +6,8 @@
 
         <!-- Style für runde Buttons -->
         <Style x:Key="RoundButtonStyle" TargetType="Button">
-            <Setter Property="Width" Value="45"/>
-            <Setter Property="Height" Value="45"/>
+            <Setter Property="Width" Value="40"/>
+            <Setter Property="Height" Value="40"/>
             <Setter Property="Background" Value="#8BB8A8"/>
             <Setter Property="Foreground" Value="White"/>
             <Setter Property="FontSize" Value="20"/>
@@ -16,7 +16,7 @@
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
             <Setter Property="Template">
-            <Setter.Value>
+                <Setter.Value>
                     <ControlTemplate TargetType="Button">
                         <Border CornerRadius="25" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}">
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
