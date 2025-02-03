@@ -4,7 +4,7 @@
         Title="Simple Media Player" 
         Icon="Assets/1Virus.ico"
         Height="450" 
-        Width="800" 
+        Width="900" 
         WindowStyle="None" 
         AllowsTransparency="True" 
         ResizeMode="NoResize" 
@@ -13,57 +13,95 @@
         <WindowChrome CaptionHeight="35"/>
     </WindowChrome.WindowChrome>
 
-    <Border BorderBrush="#FFD5FF" BorderThickness="4" CornerRadius="15" Background="#B47EB3">
+    <!-- Hauptinhalt -->
+    <Border BorderBrush="#FFD5FF" BorderThickness="4" CornerRadius="15">
+        <Border.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#B47EB3" Offset="0.0"/>
+                <GradientStop Color="#FFD5FF" Offset="0.5"/>
+                <GradientStop Color="#8BB8A8" Offset="1.0"/>
+            </LinearGradientBrush>
+        </Border.Background>
+
         <Grid Margin="6,6,0,0">
-            <Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <!-- Video und Steuerung -->
+                <ColumnDefinition Width="200"/>
+                <!-- Metadatenbereich -->
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="35"/>
+                    <!-- Titelleiste -->
+                    <RowDefinition Height="*"/>
+                    <!-- Video-Bereich -->
+                    <RowDefinition Height="Auto"/>
+                    <!-- Fortschrittsleiste -->
+                    <RowDefinition Height="53"/>
+                    <!-- Steuerleiste -->
+                </Grid.RowDefinitions>
+
                 <!-- Titelleiste -->
-                <RowDefinition Height="35"/>
+                <DockPanel Grid.Row="0" LastChildFill="True">
+                    <Border CornerRadius="15,15,15,15" Background="#8BB8A8" BorderThickness="0">
+                        <DockPanel VerticalAlignment="Top" Height="35">
+                            <Image Source="Assets/1Virus.ico" Width="20" Height="20" Margin="5,0,5,0" VerticalAlignment="Center"/>
+                            <TextBlock Text="Simple Media Player" VerticalAlignment="Center" Foreground="White" FontSize="16" FontWeight="Bold"/>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" WindowChrome.IsHitTestVisibleInChrome="True">
+                                <Button x:Name="BTN_Minimize" Content="🗕" Style="{StaticResource ControlButtonStyle}" Click="BTN_Minimize_Click"/>
+                                <Button x:Name="BTN_Maximize" Content="🗖" Style="{StaticResource ControlButtonStyle}" Click="BTN_Maximize_Click"/>
+                                <Button x:Name="BTN_Close" Content="✕" Style="{StaticResource ControlButtonStyle}" Click="BTN_Close_Click"/>
+                            </StackPanel>
+                        </DockPanel>
+                    </Border>
+                </DockPanel>
+
                 <!-- Video-Bereich -->
-                <RowDefinition Height="*"/>
+                <Border Background="#8BB8A8" Grid.Row="1" CornerRadius="10" Margin="10">
+                    <MediaElement x:Name="mediaElement" LoadedBehavior="Manual" UnloadedBehavior="Stop" Stretch="Uniform"/>
+                </Border>
+
+                <!-- Fortschrittsleiste -->
+                <Slider x:Name="ProgressSlider" Grid.Row="2" Margin="10,0,10,5"
+                        Minimum="0" Maximum="100" Value="0" 
+                        Background="#FFD5FF" 
+                        Foreground="#B47EB3" 
+                        MouseDown="ProgressSlider_MouseDown"/>
+
                 <!-- Steuerleiste -->
-                <RowDefinition Height="53"/>
-            </Grid.RowDefinitions>
-
-            <!--  Titelleiste mit Manas hilfe-->
-            <DockPanel Grid.Row="0" LastChildFill="True">
-                <!-- Äußere Border für die Titelleiste -->
-                <Border CornerRadius="15,15,15,15" Background="#8BB8A8" BorderThickness="0" Width="769">
-                    <DockPanel VerticalAlignment="Top" Height="35">
-                        <!-- Icon -->
-                        <Image Source="Assets/1Virus.ico" Width="20" Height="20" Margin="5,0,5,0" VerticalAlignment="Center"/>
-
-                        <!-- Anwendungstitel -->
-                        <TextBlock Text="Simple Media Player" 
-                       VerticalAlignment="Center" 
-                       Foreground="White" 
-                       FontSize="16" 
-                       FontWeight="Bold" />
-
-                        <!-- Fenstersteuerung -->
-                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" WindowChrome.IsHitTestVisibleInChrome="True">
-                            <Button x:Name="BTN_Minimize" Content="🗕" Style="{StaticResource ControlButtonStyle}" Click="BTN_Minimize_Click"/>
-                            <Button x:Name="BTN_Maximize" Content="🗖" Style="{StaticResource ControlButtonStyle}" Click="BTN_Maximize_Click"/>
-                            <Button x:Name="BTN_Close" Content="✕" Style="{StaticResource ControlButtonStyle}" Click="BTN_Close_Click"/>
+                <Border Background="#B47EB3" Grid.Row="3" CornerRadius="15" Margin="10,0,10,10">
+                    <DockPanel>
+                        <Button Content="⏮" Style="{StaticResource RoundButtonStyle}" Click="Previous_Click"/>
+                        <Button Content="▶" Style="{StaticResource RoundButtonStyle}" Click="PlayButton_Click"/>
+                        <Button Content="⏸" Style="{StaticResource RoundButtonStyle}" Click="PauseButton_Click"/>
+                        <Button Content="⏭" Style="{StaticResource RoundButtonStyle}" Click="Next_Click"/>
+                        <Button Content="⏹" Style="{StaticResource RoundButtonStyle}" Click="StopButton_Click"/>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="10,0,10,0">
+                            <TextBlock Text="🔊" Foreground="White" VerticalAlignment="Center" Margin="5"/>
+                            <Slider x:Name="VolumeSlider" Minimum="0" Maximum="1" Value="0.5" Width="100"
+                                    TickFrequency="0.1" IsSnapToTickEnabled="True"
+                                    ValueChanged="VolumeSlider_ValueChanged"/>
                         </StackPanel>
+                        <Button Content="🗁 Datei wählen" Click="Select_Folder" FontSize="15" FontWeight="Bold" Width="160" Foreground="White" Background="#8BB8A8"/>
                     </DockPanel>
                 </Border>
-            </DockPanel>
+            </Grid>
 
-
-            <!-- Video-Bereich -->
-            <Border Background="#8BB8A8" Grid.Row="1" CornerRadius="10" Margin="10,10,10,10">
-                <MediaElement x:Name="mediaElement" LoadedBehavior="Manual" UnloadedBehavior="Stop" Stretch="Uniform" Margin="0,16,0,0"/>
+            <!-- Metadatenbereich -->
+            <Border Grid.Column="1" Background="#8BB8A8" CornerRadius="10" Margin="10">
+                <StackPanel Margin="10">
+                    <TextBlock Text="Playlist idk" FontSize="18" FontWeight="Bold" Foreground="White"/>
+                    <TextBlock Text="Titel:" Foreground="White"/>
+                    <TextBlock x:Name="MetaTitle" Text="-" Foreground="White"/>
+                    <TextBlock Text="Dauer:" Foreground="White"/>
+                    <TextBlock x:Name="MetaDuration" Text="-" Foreground="White"/>
+                    <TextBlock Text="Bitrate:" Foreground="White"/>
+                    <TextBlock x:Name="MetaBitrate" Text="-" Foreground="White"/>
+                </StackPanel>
             </Border>
 
-            <!-- Steuerleiste -->
-            <DockPanel Background="#B47EB3" Grid.Row="2" Margin="0,0,7,4" >
-                <Button Content="⏮" Style="{StaticResource RoundButtonStyle}" Click="Previous_Click"/>
-                <Button Content="▶" Style="{StaticResource RoundButtonStyle}" Click="PlayButton_Click"/>
-                <Button Content="⏸" Style="{StaticResource RoundButtonStyle}" Click="PauseButton_Click"/>
-                <Button Content="⏭" Style="{StaticResource RoundButtonStyle}" Click="Next_Click" />
-                <Button Content="⏹" Style="{StaticResource RoundButtonStyle}" Click="StopButton_Click"/>
-                <Button Content="Datei wählen" Click="Select_Folder" FontSize="15" FontWeight="Bold" Width="120" Foreground="White" Margin="5" Background="#8BB8A8" HorizontalAlignment="Right"/>
-            </DockPanel>
         </Grid>
     </Border>
 </Window>
