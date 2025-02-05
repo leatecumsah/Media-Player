@@ -109,6 +109,9 @@ namespace SimpleMediaPlayer
                     selectedFilePath = openFileDialog.FileName;
                     mediaElement.Source = new Uri(selectedFilePath);
 
+                    mediaElement.MinHeight = 50;
+                    mediaElement.MinWidth = 50;
+
                     // Video automatisch abspielen
                     mediaElement.LoadedBehavior = MediaState.Manual;
                     mediaElement.UnloadedBehavior = MediaState.Stop;
