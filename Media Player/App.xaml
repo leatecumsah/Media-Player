@@ -15,8 +15,9 @@
             <Setter Property="BorderThickness" Value="2"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="3,3,3,3"/>
             <Setter Property="Template">
-                <Setter.Value>
+            <Setter.Value>
                     <ControlTemplate TargetType="Button">
                         <Border CornerRadius="25" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}">
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
@@ -36,7 +37,7 @@
             </Style.Triggers>
         </Style>
 
-        <!-- Style für Steuerungsbuttons (Minimieren, Maximieren, Schließen) -->
+        <!-- Style für Steuerungsbuttons (Minimieren, Maximieren, Schließen ,von MAna) -->
         <Style x:Key="ControlButtonStyle" TargetType="Button">
             <Setter Property="Width" Value="20"/>
             <Setter Property="FontWeight" Value="Bold"/>

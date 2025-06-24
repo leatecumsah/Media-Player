@@ -22,7 +22,7 @@ namespace SimpleMediaPlayer
             // Fortschrittsanzeige aktualisieren
             timer = new DispatcherTimer
             {
-                Interval = TimeSpan.FromSeconds(1)
+                Interval = TimeSpan.FromSeconds(0.05)
             };
             timer.Tick += Timer_Tick;
              mediaElement.Volume = 0.5;//lautstärke 5ß%
@@ -108,6 +108,9 @@ namespace SimpleMediaPlayer
                 {
                     selectedFilePath = openFileDialog.FileName;
                     mediaElement.Source = new Uri(selectedFilePath);
+
+                    mediaElement.MinHeight = 50;
+                    mediaElement.MinWidth = 50;
 
                     // Video automatisch abspielen
                     mediaElement.LoadedBehavior = MediaState.Manual;

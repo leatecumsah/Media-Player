@@ -55,3 +55,6 @@ C:\Users\leabu\source\repos\Media Player\Media Player\obj\Debug\Media Player_Con
 C:\Users\leabu\source\repos\Media Player\Media Player\bin\Debug\TagLibSharp.dll
 C:\Users\leabu\source\repos\Media Player\Media Player\bin\Debug\TagLibSharp.pdb
 C:\Users\leabu\source\repos\Media Player\Media Player\bin\Debug\TagLibSharp.xml
+C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\bin\Debug\TagLibSharp.dll
+C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\bin\Debug\TagLibSharp.pdb
+C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\bin\Debug\TagLibSharp.xml
