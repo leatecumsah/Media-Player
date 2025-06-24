@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\buerklele\\Documents\\GitHub\\Media-Player\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B2BC318A-AB64-4CCE-8D69-89E984AD8988}|Media Player\\Media Player.csproj|C:\\Users\\buerklele\\Documents\\GitHub\\Media-Player\\media player\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{B2BC318A-AB64-4CCE-8D69-89E984AD8988}|Media Player\\Media Player.csproj|solutionrelative:media player\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B2BC318A-AB64-4CCE-8D69-89E984AD8988}|Media Player\\Media Player.csproj|c:\\users\\buerklele\\documents\\github\\media-player\\media player\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B2BC318A-AB64-4CCE-8D69-89E984AD8988}|Media Player\\Media Player.csproj|solutionrelative:media player\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B2BC318A-AB64-4CCE-8D69-89E984AD8988}|Media Player\\Media Player.csproj|C:\\Users\\buerklele\\Documents\\GitHub\\Media-Player\\media player\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{B2BC318A-AB64-4CCE-8D69-89E984AD8988}|Media Player\\Media Player.csproj|solutionrelative:media player\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{B2BC318A-AB64-4CCE-8D69-89E984AD8988}|Media Player\\Media Player.csproj|c:\\users\\buerklele\\documents\\github\\media-player\\media player\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2BC318A-AB64-4CCE-8D69-89E984AD8988}|Media Player\\Media Player.csproj|solutionrelative:media player\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2BC318A-AB64-4CCE-8D69-89E984AD8988}|Media Player\\Media Player.csproj|c:\\users\\buerklele\\documents\\github\\media-player\\media player\\data\\mediadbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2BC318A-AB64-4CCE-8D69-89E984AD8988}|Media Player\\Media Player.csproj|solutionrelative:media player\\data\\mediadbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,43 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\buerklele\\Documents\\GitHub\\Media-Player\\Media Player\\App.xaml",
-              "RelativeDocumentMoniker": "Media Player\\App.xaml",
-              "ToolTip": "C:\\Users\\buerklele\\Documents\\GitHub\\Media-Player\\Media Player\\App.xaml",
-              "RelativeToolTip": "Media Player\\App.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-21T15:11:43.621Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\buerklele\\Documents\\GitHub\\Media-Player\\Media Player\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "Media Player\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\buerklele\\Documents\\GitHub\\Media-Player\\Media Player\\MainWindow.xaml",
-              "RelativeToolTip": "Media Player\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-01T21:22:11.952Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\buerklele\\Documents\\GitHub\\Media-Player\\Media Player\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "Media Player\\MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\buerklele\\Documents\\GitHub\\Media-Player\\Media Player\\MainWindow.xaml.cs",
               "RelativeToolTip": "Media Player\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAJIAAAAAAAAAAADwvwEAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAcwBcAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-01T21:22:10.042Z",
+              "WhenOpened": "2025-06-24T11:15:40.349Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\buerklele\\Documents\\GitHub\\Media-Player\\Media Player\\App.xaml.cs",
+              "RelativeDocumentMoniker": "Media Player\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\buerklele\\Documents\\GitHub\\Media-Player\\Media Player\\App.xaml.cs",
+              "RelativeToolTip": "Media Player\\App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T11:13:28.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MediaDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\buerklele\\Documents\\GitHub\\Media-Player\\Media Player\\Data\\MediaDbContext.cs",
+              "RelativeDocumentMoniker": "Media Player\\Data\\MediaDbContext.cs",
+              "ToolTip": "C:\\Users\\buerklele\\Documents\\GitHub\\Media-Player\\Media Player\\Data\\MediaDbContext.cs",
+              "RelativeToolTip": "Media Player\\Data\\MediaDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T11:12:04.188Z",
               "EditorCaption": ""
             }
           ]

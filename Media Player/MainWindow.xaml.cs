@@ -22,7 +22,7 @@ namespace SimpleMediaPlayer
             // Fortschrittsanzeige aktualisieren
             timer = new DispatcherTimer
             {
-                Interval = TimeSpan.FromSeconds(1)
+                Interval = TimeSpan.FromSeconds(0.05)
             };
             timer.Tick += Timer_Tick;
              mediaElement.Volume = 0.5;//lautstärke 5ß%
