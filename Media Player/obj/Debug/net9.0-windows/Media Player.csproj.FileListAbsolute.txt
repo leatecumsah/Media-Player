@@ -111,3 +111,30 @@ C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\obj\Debug\net9.0-w
 C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\obj\Debug\net9.0-windows\Media Player.pdb
 C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\obj\Debug\net9.0-windows\Media Player.genruntimeconfig.cache
 C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\obj\Debug\net9.0-windows\ref\Media Player.dll
+C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\bin\Debug\net9.0-windows\BouncyCastle.Cryptography.dll
+C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\bin\Debug\net9.0-windows\Google.Protobuf.dll
+C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\bin\Debug\net9.0-windows\K4os.Compression.LZ4.dll
+C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\bin\Debug\net9.0-windows\K4os.Compression.LZ4.Streams.dll
+C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\bin\Debug\net9.0-windows\K4os.Hash.xxHash.dll
+C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\bin\Debug\net9.0-windows\Microsoft.EntityFrameworkCore.dll
+C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\bin\Debug\net9.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\bin\Debug\net9.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\bin\Debug\net9.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\bin\Debug\net9.0-windows\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\bin\Debug\net9.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\bin\Debug\net9.0-windows\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\bin\Debug\net9.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\bin\Debug\net9.0-windows\Microsoft.Extensions.Logging.dll
+C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\bin\Debug\net9.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\bin\Debug\net9.0-windows\Microsoft.Extensions.Options.dll
+C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\bin\Debug\net9.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\bin\Debug\net9.0-windows\MySql.Data.dll
+C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\bin\Debug\net9.0-windows\MySql.EntityFrameworkCore.dll
+C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\bin\Debug\net9.0-windows\ZstdSharp.dll
+C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\bin\Debug\net9.0-windows\runtimes\win-x64\native\comerr64.dll
+C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\bin\Debug\net9.0-windows\runtimes\win-x64\native\gssapi64.dll
+C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\bin\Debug\net9.0-windows\runtimes\win-x64\native\k5sprt64.dll
+C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\bin\Debug\net9.0-windows\runtimes\win-x64\native\krb5_64.dll
+C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\bin\Debug\net9.0-windows\runtimes\win-x64\native\krbcc64.dll
+C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\obj\Debug\net9.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\buerklele\Documents\GitHub\Media-Player\Media Player\obj\Debug\net9.0-windows\Media Player_MarkupCompile.lref

@@ -1,9 +1,16 @@
-﻿using Microsoft.Win32;
+﻿using Media_Player.Data;
+using Microsoft.Win32;
 using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Threading;
 using TagLib;//nugget für Metadaten und so
+using Media_Player.ViewModels;
+using Media_Player.Models;
+using System.IO;
+using MySql.Data.MySqlClient; // MySQL Connector für C#
+using System.Collections.ObjectModel; // Für ObservableCollection
+
 
 
 namespace SimpleMediaPlayer
@@ -11,6 +18,10 @@ namespace SimpleMediaPlayer
     public partial class MainWindow : Window
     {
         private string selectedFilePath = null;
+        private readonly string videoFolder = Path.Combine(
+        Environment.GetFolderPath(Environment.SpecialFolder.UserProfile),
+        @"Videos\Mediaplayer-Samples");
+
         private string userMusicFolder;
         private DispatcherTimer timer;
 
@@ -18,6 +29,10 @@ namespace SimpleMediaPlayer
         {
             InitializeComponent();
             userMusicFolder = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Videos";
+            /*DbConnectionTest.TestConnection();*/ /*Muss unkommentiert sein um verbindung zur db zu testen*/
+            DataContext = new PlaylistViewModel();
+            var videos = LoadPlaylistVideos(1); // Playlist mit ID 1
+            myListBox.ItemsSource = videos;
 
             // Fortschrittsanzeige aktualisieren
             timer = new DispatcherTimer
@@ -25,7 +40,7 @@ namespace SimpleMediaPlayer
                 Interval = TimeSpan.FromSeconds(0.05)
             };
             timer.Tick += Timer_Tick;
-             mediaElement.Volume = 0.5;//lautstärke 5ß%
+             mediaElement.Volume = 0.5;//lautstärke default 5ß%
         }
 
         private void Timer_Tick(object sender, EventArgs e)
@@ -163,5 +178,98 @@ namespace SimpleMediaPlayer
         {
             // Vorheriger Track (optional)
         }
+
+        private void myListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (myListBox.SelectedItem is VideoFile selectedVideo)
+            {
+                try
+                {
+                    string fullPath = Path.Combine(videoFolder, selectedVideo.FilePath);
+
+                    // Prüfen ob Datei existiert
+                    if (!System.IO.File.Exists(fullPath))
+                    {
+                        MessageBox.Show("Video nicht gefunden:\n" + fullPath, "Fehler", MessageBoxButton.OK, MessageBoxImage.Warning);
+                        return;
+                    }
+
+
+
+                    mediaElement.Stop();
+                    mediaElement.Source = new Uri(fullPath, UriKind.Absolute);
+                     // Sicherheits-Reset
+                    mediaElement.LoadedBehavior = MediaState.Manual;
+                    mediaElement.UnloadedBehavior = MediaState.Stop;
+                    mediaElement.Play();
+                    
+                    MetaTitle.Text = selectedVideo.Title;
+                    MetaDuration.Text = selectedVideo.Duration.ToString(@"hh\:mm\:ss");
+                    MetaBitrate.Text = "N/A"; // Falls Bitrate nicht geladen wird
+
+                    timer = new DispatcherTimer
+            {
+                Interval = TimeSpan.FromSeconds(0.05)
+            };
+            timer.Tick += Timer_Tick;
+             mediaElement.Volume = 0.5;//lautstärke default 5ß%
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Fehler beim Abspielen: " + ex.Message);
+                }
+            }
+        }
+
+
+        private void PlayVideo(VideoFile videoFile)
+        {
+            string musicFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyMusic);
+            string fullPath = Path.Combine(musicFolder, videoFile.FilePath);
+
+            mediaElement.Source = new Uri(fullPath);
+            mediaElement.Play();
+        }
+
+       
+        public ObservableCollection<VideoFile> LoadPlaylistVideos(int playlistID)
+        {
+            var videos = new ObservableCollection<VideoFile>();
+            string connectionString = "Server=localhost;Database=mediplayer_db;Uid=root;Pwd=;"; // MySQL-Verbindung
+            
+            string query = @"
+        SELECT vf.id, vf.title, vf.filePath, vf.duration
+        FROM Playlist_Video pv
+        JOIN VideoFile vf ON pv.VideoFileID = vf.id
+        WHERE pv.PlaylistID = @playlistID";
+
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@playlistID", playlistID);
+
+                    using (var reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            videos.Add(new VideoFile
+                            {
+                                Id = reader.GetInt32("id"),
+                                Title = reader.GetString("title"),
+                                FilePath = reader.GetString("filePath"),
+                                Duration = reader.GetTimeSpan("duration")
+                            });
+                        }
+                    }
+                }
+            }
+
+            return videos;
+        }
+
     }
 }

@@ -1,6 +1,7 @@
-﻿<Window x:Name="Mäh" x:Class="SimpleMediaPlayer.MainWindow"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="clr-namespace:Media_Player.ViewModels"
+        xmlns:av="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="av" x:Name="Mäh" x:Class="SimpleMediaPlayer.MainWindow"
         Title="Simple Media Player" 
         Icon="Assets/1Virus.ico"
         Height="450" 
@@ -13,6 +14,9 @@
         <WindowChrome CaptionHeight="35"/>
     </WindowChrome.WindowChrome>
 
+    <Window.DataContext>
+        <local:PlaylistViewModel/>
+    </Window.DataContext>
     <!-- Hauptinhalt -->
     <Border BorderBrush="#FFD5FF" BorderThickness="4" CornerRadius="15">
         <Border.Background>
@@ -23,7 +27,7 @@
             </LinearGradientBrush>
         </Border.Background>
 
-        <Grid Margin="6,6,0,0">
+        <Grid Margin="6,6,6,6">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <!-- Video und Steuerung -->
@@ -91,9 +95,9 @@
             </Grid>
 
             <!-- Metadatenbereich -->
-            <Border Grid.Column="1" Background="#8BB8A8" CornerRadius="10" Margin="10,10,10,10">
+            <Border Grid.Column="1" Background="#8BB8A8" CornerRadius="10" Margin="10,0,10,271">
                 <StackPanel Margin="10">
-                    <TextBlock Text="Playlist idk" FontSize="18" FontWeight="Bold" Foreground="White"/>
+                    <TextBlock Text="currently playing" FontSize="18" FontWeight="Bold" Foreground="White"/>
                     <TextBlock Text="Titel:" Foreground="White"/>
                     <TextBlock x:Name="MetaTitle" Text="-" Foreground="White"/>
                     <TextBlock Text="Dauer:" Foreground="White"/>
@@ -101,7 +105,27 @@
                     <TextBlock Text="Bitrate:" Foreground="White"/>
                     <TextBlock x:Name="MetaBitrate" Text="-" Foreground="White"/>
                 </StackPanel>
+
             </Border>
+
+            <!--Playlist-->
+            <Border Grid.Column="1" Background="#8BB8A8" CornerRadius="10" Margin="10,176,10,10">
+                <StackPanel Margin="10">
+                    <TextBlock Text="Playlist oder so" FontSize="18" FontWeight="Bold" Foreground="White"/>
+                    <ListBox 
+                        x:Name="myListBox" ItemsSource="{Binding Videos}"
+                        SelectionChanged="myListBox_SelectionChanged"
+                         DisplayMemberPath="Title"
+                         Background="#8BB8A8"
+                         Foreground="White"
+                         Height="200"
+                         Margin="0,5,0,0"/>         
+
+
+                </StackPanel>
+
+            </Border>
+
 
         </Grid>
     </Border>
